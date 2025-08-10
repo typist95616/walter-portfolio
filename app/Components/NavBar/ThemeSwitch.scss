@@ -1,0 +1,61 @@
+.themeSwitch-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    border-radius: 20px;
+    padding: 4px 6px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+
+    .switch-ball {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        transition: left 0.3s, background 0.3s;
+        z-index: 1;
+    }
+
+    .light-icon {}
+
+    .dark-icon {}
+
+    &.dark {
+        background: black;
+        border: 2px solid white;
+
+        .light-icon {
+            color: white;
+        }
+
+        .dark-icon {
+            opacity: 1;
+        }
+
+        .switch-ball {
+            left: 0px;
+            background-color: white;
+        }
+
+    }
+
+    &.light {
+        background-color: white;
+        border: 2px solid black;
+
+        .lighticon {
+            opacity: 1;
+        }
+
+        .dark-icon {
+            color: #2d3a8c;
+        }
+
+        .switch-ball {
+            left: 33.8px;
+            background-color: black;
+        }
+    }
+}

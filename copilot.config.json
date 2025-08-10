@@ -1,0 +1,10 @@
+{
+  "language": "Cantonese",
+  "context": "educating new learners",
+  "userLevel": "beginner",
+  "explainConcepts": true,
+  "provideExamples": true,
+  "codeExampleClarity": "beginner-friendly",
+  "editFilesByDefault": false,
+  "suggestionMode": "chat-only"
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --font-header: 'Noto Sans', sans-serif;
+}
+
+[data-theme='dark'] {
+    --bg-color: rgb(24 24 27);
+    --text-color: white;
+}
+
+.navBar-root {
+    font-family: var(--font-header);
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    * {
+        padding-top: 120px;
+    }
+}
+
+.global-ripple {
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    background: rgba(128, 128, 128, 0.7);
+    transform: scale(0);
+    animation: global-ripple-effect 0.7s linear;
+    z-index: 9999;
+}
+
+@keyframes global-ripple-effect {
+    to {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}

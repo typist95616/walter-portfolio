@@ -1,0 +1,23 @@
+.navBar-root {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    .navBar-left {
+
+    }
+
+    .navBar-right {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+}
