@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import "./main.scss";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";

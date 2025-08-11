@@ -1,3 +1,49 @@
-.home-root {
-    height: 500px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+
+    .home-root {
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        gap: 20px;
+
+        .intro {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+
+            .intro-1 {
+                font-size: 36px;
+            }
+
+            .intro-2 {
+                font-size: 36px;
+            }
+
+            .intro-3 {
+                font-size: 72px;
+                font-weight: 600;
+                background: linear-gradient(287deg, rgba(66, 148, 246, 1) 6%, rgba(32, 105, 171, 1) 50%, rgba(35, 255, 245, 1) 99%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .intro-4 {
+                font-size: 48px;
+            }
+        }
+
+        .profileImage {
+            width: 400px;
+            height: 400px;
+        }
+    }
 }

@@ -2,12 +2,14 @@
 
 html {
     scroll-behavior: smooth;
+    background: var(--bg-color)
 }
 
 :root {
     --bg-color: white;
     --text-color: black;
     --font-header: 'Noto Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 [data-theme='dark'] {
@@ -24,10 +26,9 @@ html {
 .content {
     padding-left: 20px;
     padding-right: 20px;
-
-    * {
-        padding-top: 120px;
-    }
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .global-ripple {
@@ -42,7 +43,7 @@ html {
 
 @keyframes global-ripple-effect {
     to {
-        transform: scale(0.5);
+        transform: scale(2);
         opacity: 0;
     }
 }
