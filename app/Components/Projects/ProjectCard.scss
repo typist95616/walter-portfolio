@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --card-bg-color: #d3d3d3;
+    --card-text-color: black;
+}
+
+[data-theme='dark'] {
+    --card-bg-color: black;
+    --card-text-color: white;
+}
+
+.projectCard-root {
+    background-color: var(--card-bg-color);
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 5px solid black;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .coverImage {
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+
+    .project-heading {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .project-gitHub-link {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+
+    .zoomIcon {
+        align-self: flex-end;
+        cursor: pointer;
+    }
+}

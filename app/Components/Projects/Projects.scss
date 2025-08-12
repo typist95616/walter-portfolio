@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
 .projects-container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -9,5 +11,37 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        .projects-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding-top: 30px;
+
+            .projects-heading {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 48px;
+                font-weight: 600;
+            }
+
+            .ProjectCard-container {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    }
+
+    .popUp-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        pointer-events: auto;
+        background: rgba(0, 0, 0, 0.7);
     }
 }

@@ -8,9 +8,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--bg-color);
+    background-color: var(--navBar-bg-color);
     color: var(--text-color);
-    z-index: 1;
+    z-index: 998;
+    backdrop-filter: blur(3px);
 
     .navBar-left {
 
