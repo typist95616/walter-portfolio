@@ -47,6 +47,17 @@
         cursor: pointer;
     }
 
+    .project-website {
+
+        .project-website-link {
+            cursor: pointer;
+            font-size: 14px;
+            color: blue;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+
     .project-description {
         font-size: 13px;
         font-weight: 500;

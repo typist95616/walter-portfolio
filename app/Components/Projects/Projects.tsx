@@ -33,6 +33,16 @@ export default function Projects() {
         "../Images/bit4.png",
     ]
 
+    const martImages = [
+        "../Images/mart1.png",
+        "../Images/mart2.png",
+        "../Images/mart3.png",
+        "../Images/mart4.png",
+        "../Images/mart5.png",
+        "../Images/mart6.png",
+        "../Images/mart7.png",
+    ]
+
     return (
         <div className="projects-container " id={"projects"}>
             <div className="projects-root">
@@ -50,6 +60,7 @@ export default function Projects() {
                             gitHubLink="https://github.com/jackielai1205/ScannerApp"
                             description="A 3D scanner app on IOS made by Swift. This app allows user to import 3D models to interact with, also let users to scan their own object with phone's camera and convert to 3D model."
                             setPopUpShow={setPopUpShow}
+                            scaleValue={0.9}
                         />
                         <ProjectCard
                             heading={"8 Bit Dark Souls"}
@@ -61,6 +72,19 @@ export default function Projects() {
                             imagesHeight={150}
                             gitHubLink="https://github.com/jackielai1205/8bitDarkSouls"
                             description="2D horizontal action game on PC made by C#. "
+                            setPopUpShow={setPopUpShow}
+                        />
+                        <ProjectCard
+                            heading={"Easy Mart"}
+                            coverImage="/Images/mart1.png"
+                            coverWidth={300}
+                            coverHeight={300}
+                            images={martImages}
+                            imagesWidth={200}
+                            imagesHeight={150}
+                            gitHubLink="https://github.com/typist95616/easy-mart"
+                            description="A Shopping website build with Typescript, React & Next.js. Website including shopping cart, user authentication and address management etc."
+                            website={"https://easy-mart-mu.vercel.app"}
                             setPopUpShow={setPopUpShow}
                         />
                     </div>
