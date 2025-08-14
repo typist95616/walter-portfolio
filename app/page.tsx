@@ -5,7 +5,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import SkillSets from "./Components/SkillSets/SkillSets";
-import Projects from "./Components/Projects/Project";
+import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import { useEffect } from "react";
 

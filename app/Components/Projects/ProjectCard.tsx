@@ -2,6 +2,7 @@ import "./ProjectCard.scss";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import { MdOutlineZoomOutMap } from "react-icons/md";
+import StandaloneImageSlider from "../StandaloneImageSlider";
 
 interface ProjectCardProps {
     heading: string;
@@ -9,6 +10,8 @@ interface ProjectCardProps {
     coverWidth: number;
     coverHeight: number;
     images: string[];
+    imagesWidth: number;
+    imagesHeight: number;
     gitHubLink: string;
     description: string;
     setPopUpShow: (show: boolean) => void;
@@ -19,7 +22,8 @@ export default function ProjectCard(props: ProjectCardProps) {
     return (
         <div className="projectCard-root">
             <div className="image-container">
-                <Image src={props.coverImage} alt="Go Around Cover" className="coverImage" width={props.coverWidth} height={props.coverHeight}></Image>
+                <StandaloneImageSlider images={props.images} direction="left" imageWidth={props.imagesWidth} imageHeight={props.imagesHeight}/>
+                {/* <Image src={props.coverImage} alt="Go Around Cover" className="coverImage" width={props.coverWidth} height={props.coverHeight}></Image> */}
             </div>
             <div className="project-heading">
                 <div>{props.heading}</div>
@@ -31,7 +35,7 @@ export default function ProjectCard(props: ProjectCardProps) {
             <div className="project-description">
                 <div>{props.description}</div>
             </div>
-            <MdOutlineZoomOutMap size={30} className="zoomIcon" onClick={() => props.setPopUpShow(true)}/>
+            {/* <MdOutlineZoomOutMap size={30} className="zoomIcon" onClick={() => props.setPopUpShow(true)}/> */}
         </div>
     )
 }

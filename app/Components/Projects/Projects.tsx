@@ -17,6 +17,22 @@ export default function Projects() {
         }
     }, [popUpShow]);
 
+    const scannerImages = [
+        "../Images/go1.png",
+        "../Images/go2.png",
+        "../Images/go3.png",
+        "../Images/go4.png",
+        "../Images/go5.png",
+        "../Images/go6.png",
+    ]
+
+    const darkSoulsImages = [
+        "../Images/bit1.png",
+        "../Images/bit2.png",
+        "../Images/bit3.png",
+        "../Images/bit4.png",
+    ]
+
     return (
         <div className="projects-container " id={"projects"}>
             <div className="projects-root">
@@ -28,9 +44,11 @@ export default function Projects() {
                             coverImage="/Images/go2.png"
                             coverWidth={100}
                             coverHeight={200}
-                            images={[""]}
+                            images={scannerImages}
+                            imagesWidth={100}
+                            imagesHeight={200}
                             gitHubLink="https://github.com/jackielai1205/ScannerApp"
-                            description="This is a description for Scanner App"
+                            description="A 3D scanner app on IOS made by Swift. This app allows user to import 3D models to interact with, also let users to scan their own object with phone's camera and convert to 3D model."
                             setPopUpShow={setPopUpShow}
                         />
                         <ProjectCard
@@ -38,13 +56,15 @@ export default function Projects() {
                             coverImage="/Images/bit1.png"
                             coverWidth={300}
                             coverHeight={300}
-                            images={[]}
+                            images={darkSoulsImages}
+                            imagesWidth={200}
+                            imagesHeight={150}
                             gitHubLink="https://github.com/jackielai1205/8bitDarkSouls"
-                            description="This is a description for 8 bit Dark Souls"
+                            description="2D horizontal action game on PC made by C#. "
                             setPopUpShow={setPopUpShow}
                         />
                     </div>
-                </div>``
+                </div>
             </div>
             {popUpShow && (
                 <>
