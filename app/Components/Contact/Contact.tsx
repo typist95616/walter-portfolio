@@ -2,13 +2,18 @@ import { useState } from "react";
 import "./Contact.scss";
 import emailjs from 'emailjs-com';
 
-export default function Contact() {
+interface contactProps {
+    triggerDropDown: () => void;
+}
+
+export default function Contact(props: contactProps) {
 
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
         emailjs.sendForm('service_m247ebs', 'template_9x035za', e.currentTarget as HTMLFormElement, 'VMFToWX3DpYH4YCie')
             .then((result) => {
                 console.log(result.text);
+                props.triggerDropDown();
             }, (error) => {
                 console.log(error.text);
             });
