@@ -17,6 +17,7 @@ interface ProjectCardProps {
     website?: string;
     setPopUpShow: (show: boolean) => void;
     scaleValue?: number;
+    zoomTopOffset?: number;
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
@@ -24,7 +25,7 @@ export default function ProjectCard(props: ProjectCardProps) {
     return (
         <div className="projectCard-root">
             <div className="image-container">
-                <StandaloneImageSlider images={props.images} direction="left" imageWidth={props.imagesWidth} imageHeight={props.imagesHeight} scaleValue={props.scaleValue} />
+                <StandaloneImageSlider images={props.images} direction="left" imageWidth={props.imagesWidth} imageHeight={props.imagesHeight} scaleValue={props.scaleValue} zoomTopOffset={props.zoomTopOffset} />
                 {/* <Image src={props.coverImage} alt="Go Around Cover" className="coverImage" width={props.coverWidth} height={props.coverHeight}></Image> */}
             </div>
             <div className="project-heading">

@@ -61,6 +61,7 @@ export default function Projects() {
                             description="A 3D scanner app on IOS made by Swift. This app allows user to import 3D models to interact with, also let users to scan their own object with phone's camera and convert to 3D model."
                             setPopUpShow={setPopUpShow}
                             scaleValue={0.9}
+                            zoomTopOffset={30}
                         />
                         <ProjectCard
                             heading={"8 Bit Dark Souls"}
@@ -73,6 +74,7 @@ export default function Projects() {
                             gitHubLink="https://github.com/jackielai1205/8bitDarkSouls"
                             description="2D horizontal action game on PC made by C#. "
                             setPopUpShow={setPopUpShow}
+                            zoomTopOffset={-30}
                         />
                         <ProjectCard
                             heading={"Easy Mart"}
@@ -86,6 +88,7 @@ export default function Projects() {
                             description="A Shopping website build with Typescript, React & Next.js. Website including shopping cart, user authentication and address management etc."
                             website={"https://easy-mart-mu.vercel.app"}
                             setPopUpShow={setPopUpShow}
+                            zoomTopOffset={-30}
                         />
                     </div>
                 </div>

@@ -7,9 +7,10 @@ interface StandaloneImageSliderProps {
   imageWidth: number;
   imageHeight: number;
   scaleValue?: number;
+  zoomTopOffset?: number;
 }
 
-const StandaloneImageSlider: React.FC<StandaloneImageSliderProps> = ({ images, direction, imageHeight, imageWidth, scaleValue }) => {
+const StandaloneImageSlider: React.FC<StandaloneImageSliderProps> = ({ images, direction, imageHeight, imageWidth, scaleValue, zoomTopOffset }) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -21,7 +22,7 @@ const StandaloneImageSlider: React.FC<StandaloneImageSliderProps> = ({ images, d
     const rect = e.currentTarget.getBoundingClientRect();
     setZoomImg(src);
     setZoomPos({
-      top: rect.top + window.scrollY,
+      top: rect.top + window.scrollY + zoomTopOffset!,
       left: rect.left + window.scrollX
     });
   };
@@ -118,6 +119,7 @@ const StandaloneImageSlider: React.FC<StandaloneImageSliderProps> = ({ images, d
         msOverflowStyle: "none",
         scrollbarWidth: "none",
         WebkitOverflowScrolling: "touch",
+        minHeight: imageHeight,
       }}
       className="hide-scrollbar"
       onMouseDown={onMouseDown}
@@ -126,33 +128,29 @@ const StandaloneImageSlider: React.FC<StandaloneImageSliderProps> = ({ images, d
       onMouseMove={onMouseMove}
       onScroll={onScroll}
     >
-      <div style={{ display: "inline-block", margin: "0 40px" }}>
+      <div style={{ display: "inline-block", margin: "0 40px", minHeight: imageHeight }}>
         {extendedImages.map((src, idx) => (
-          <div
+          <img
             key={idx}
-            style={{ position: "relative", display: "inline-block" }}
-          >
-            <img
-              src={src}
-              alt={`slider-img-${idx}`}
-              style={{
-                width: imageWidth,
-                height: imageHeight,
-                objectFit: "fill",
-                display: "inline-block",
-                marginRight: 10,
-                userSelect: "none",
-                pointerEvents: "auto",
-                borderRadius: "20px"
-              }}
-              draggable={false}
-              onMouseDown={onMouseDown}
-              onMouseMove={onMouseMove}
-              onMouseUp={onMouseUp}
-              onMouseEnter={e => handleMouseEnter(e, src)}
-              onMouseLeave={handleMouseLeave}
-            />
-          </div>
+            src={src}
+            alt={`slider-img-${idx}`}
+            style={{
+              width: imageWidth,
+              height: imageHeight,
+              objectFit: "cover",
+              display: "inline-block",
+              marginRight: 10,
+              userSelect: "none",
+              pointerEvents: "auto",
+              borderRadius: "20px",
+            }}
+            draggable={false}
+            onMouseDown={onMouseDown}
+            onMouseMove={onMouseMove}
+            onMouseUp={onMouseUp}
+            onMouseEnter={e => handleMouseEnter(e, src)}
+            onMouseLeave={handleMouseLeave}
+          />
         ))}
       </div>
 
