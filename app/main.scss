@@ -27,6 +27,13 @@ html {
     --visit-color: #8fbaff;
 }
 
+.main-root {
+    
+    @media (max-width: 600px) {
+        overflow: hidden;
+    }
+}
+
 .navBar-root {
     font-family: var(--font-header);
     font-weight: 600;
