@@ -23,16 +23,16 @@ const iconVariants: Variants = {
 
 export default function SkillSets() {
     const iconsRow1 = [
-        <RiJavascriptFill size={80} key="js" />, 
-        <BiLogoTypescript size={80} key="ts" />, 
-        <FaReact size={80} key="react" />, 
-        <FaGithub size={80} key="github" />
+        <RiJavascriptFill size={80} key="js" className="js-icon icon"/>, 
+        <BiLogoTypescript size={80} key="ts" className="ts-icon icon"/>, 
+        <FaReact size={80} key="react" className="react-icon icon"/>, 
+        <FaGithub size={80} key="github" className="github-icon icon"/>
     ];
     const iconsRow2 = [
-        <FaHtml5 size={80} key="html" />, 
-        <IoLogoCss3 size={80} key="css" />, 
-        <SiPrisma size={80} key="prisma" />, 
-        <FaSwift size={80} key="swift" />
+        <FaHtml5 size={80} key="html" className="html-icon icon"/>, 
+        <IoLogoCss3 size={80} key="css" className="css-icon icon"/>, 
+        <SiPrisma size={80} key="prisma" className="prisma-icon icon"/>, 
+        <FaSwift size={80} key="swift" className="swift-icon icon"/>
     ];
 
     return (

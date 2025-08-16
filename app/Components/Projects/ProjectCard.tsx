@@ -34,12 +34,12 @@ export default function ProjectCard(props: ProjectCardProps) {
             <div className="project-gitHub-link" onClick={() => window.open(props.gitHubLink, "_blank")}>
                 <FaGithub size={30} />
                 <div>View Project</div>
+                {props.website && (
+                    <div className="project-website">
+                        <div className="project-website-link" onClick={() => window.open(props.website, "_blank")}>Visit Website</div>
+                    </div>
+                )}
             </div>
-            {props.website && (
-                <div className="project-website">
-                    <div className="project-website-link" onClick={() => window.open(props.website, "_blank")}>Visit Website</div>
-                </div>
-            )}
             <div className="project-description">
                 <div>{props.description}</div>
             </div>

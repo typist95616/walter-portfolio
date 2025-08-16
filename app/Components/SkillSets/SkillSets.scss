@@ -48,3 +48,42 @@
         }
     }
 }
+
+.icon {
+    transition: transform 0.2s, color 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s, color 0.2s;
+}
+
+.js-icon:hover {
+    color: #F0DB4F;
+}
+
+.ts-icon:hover {
+    color: #3178C6;
+}
+
+.react-icon:hover {
+    color: #61DBFB;
+}
+
+.github-icon:hover {}
+
+.html-icon:hover {
+    color: #E34C26;
+}
+
+.css-icon:hover {
+    color: #2965F1;
+}
+
+.prisma-icon:hover {
+    color: #4DB6AC;
+}
+
+.swift-icon:hover {
+    color: #F05138;
+}

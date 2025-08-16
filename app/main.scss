@@ -14,6 +14,7 @@ html {
     --navBar-bg-color: rgba(255, 255, 255, 0.8);
     overflow-x: hidden;
     --placeholder-color: #888;
+    --visit-color: blue;
 }
 
 [data-theme='dark'] {
@@ -23,6 +24,7 @@ html {
     --text-color-op: black;
     --navBar-bg-color: rgba(24, 24, 27, 0.8);
     --placeholder-color: #bbb;
+    --visit-color: #8fbaff;
 }
 
 .navBar-root {
