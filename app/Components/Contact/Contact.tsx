@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./Contact.scss";
 import emailjs from 'emailjs-com';
 
@@ -8,11 +8,14 @@ interface contactProps {
 
 export default function Contact(props: contactProps) {
 
+    const formRef = useRef<HTMLFormElement>(null);
+
     const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
         emailjs.sendForm('service_m247ebs', 'template_9x035za', e.currentTarget as HTMLFormElement, 'VMFToWX3DpYH4YCie')
             .then((result) => {
                 console.log(result.text);
+                formRef.current?.reset();
                 props.triggerDropDown();
             }, (error) => {
                 console.log(error.text);
@@ -24,7 +27,7 @@ export default function Contact(props: contactProps) {
             <div className="contact-root">
                 <div className="contact-content">
                     <div className="contact-heading">Get in touch~</div>
-                    <form className="contact-form" onSubmit={sendEmail}>
+                    <form ref={formRef} className="contact-form" onSubmit={sendEmail}>
                         <div className="form-name">
                             <div className="form-name-text">Full Name: </div>
                             <input type="text" placeholder="Your Name" className="form-name-input" name="name"></input>
