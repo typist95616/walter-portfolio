@@ -14,12 +14,33 @@
     backdrop-filter: blur(3px);
     font-size: 18px;
 
-    .navBar-left {}
+    .navBar-left {
+        display: flex;
+        align-items: center;
+    }
 
     .navBar-right {
         display: flex;
         align-items: center;
-        gap: 40px;
+        gap: 20px;
+
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            a {
+                color: inherit;
+                border-radius: 10px;
+                padding: 5px 8px;
+                transition: background-color 0.3s, color 0.3s;
+
+                &:hover {
+                    background-color: var(--bg-color-op);
+                    color: var(--text-color-op);
+                }
+            }
+        }
     }
 
     @media (max-width: 600px) {

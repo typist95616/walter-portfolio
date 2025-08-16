@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import "./NavBar.scss";
 import ThemeSwitch from "./ThemeSwitch";
+import { SiCodingninjas } from "react-icons/si";
 
 export default function NavBar() {
 
@@ -19,14 +20,24 @@ export default function NavBar() {
     return (
         <div className="navBar-root">
             <div className="navBar-left">
-                <div>Logo</div>
+                <SiCodingninjas size={40}></SiCodingninjas>
             </div>
             <div className="navBar-right">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skillSets">Skill Sets</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <div className="container">
+                    <a href="#home">Home</a>
+                </div>
+                <div className="container">
+                    <a href="#about">About</a>
+                </div>
+                <div className="container">
+                    <a href="#skillSets">Skills</a>
+                </div>
+                <div className="container">
+                    <a href="#projects">Projects</a>
+                </div>
+                <div className="container">
+                    <a href="#contact">Contact</a>
+                </div>
                 <ThemeSwitch onClick={toggleTheme} />
             </div>
         </div>
