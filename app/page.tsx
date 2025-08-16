@@ -8,6 +8,7 @@ import SkillSets from "./Components/SkillSets/SkillSets";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import { useEffect, useState } from "react";
+import SideBar from "./Components/SideBar";
 
 export default function Main() {
 
@@ -51,6 +52,7 @@ export default function Main() {
         <Projects></Projects>
         <Contact triggerDropDown={triggerDropDown}></Contact>
       </div>
+      <SideBar></SideBar>
     </div>
   );
 }

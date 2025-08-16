@@ -1,0 +1,24 @@
+.sideBar-root {
+    top: 50%;
+    left: 0%;
+    position: fixed;
+    z-index: 999;
+    background-color: var(--bg-color-op);
+    color: var(--text-color-op);
+    height: 400px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transform: translate(0%, -50%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, color 0.3s;
+
+    .icon {
+        cursor: pointer;
+    }
+}

@@ -8,6 +8,8 @@ html {
 :root {
     --bg-color: white;
     --text-color: black;
+    --bg-color-op: black;
+    --text-color-op: white;
     --font-header: 'Noto Sans', sans-serif;
     --navBar-bg-color: rgba(255, 255, 255, 0.8);
     overflow-x: hidden;
@@ -17,6 +19,8 @@ html {
 [data-theme='dark'] {
     --bg-color: rgb(24 24 27);
     --text-color: white;
+    --bg-color-op: white;
+    --text-color-op: black;
     --navBar-bg-color: rgba(24, 24, 27, 0.8);
     --placeholder-color: #bbb;
 }
