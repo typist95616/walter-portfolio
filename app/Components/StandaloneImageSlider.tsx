@@ -85,21 +85,28 @@ const StandaloneImageSlider: React.FC<StandaloneImageSliderProps> = ({ images, d
   };
 
   // 自動慢慢向左移動圖片
+  // 放喺 component 頂部
+  const lastTimeRef = useRef<number>(0);
+
   useEffect(() => {
-    let animationFrame: number;
+    let timer: number;
+    const speed = 30; // px per second
+    const interval = 16; // ms, 約 60fps
+
     function autoScroll() {
       if (sliderRef.current && !isDragging && !zoomImg) {
+        const move = speed * (interval / 500);
         if (direction === "left") {
-          sliderRef.current.scrollLeft += 0.5; // 調整數字可以改變速度
+          sliderRef.current.scrollLeft += move;
         } else {
-          sliderRef.current.scrollLeft -= 0.5; // 調整數字可以改變速度
+          sliderRef.current.scrollLeft -= move;
         }
       }
-      animationFrame = requestAnimationFrame(autoScroll);
+      timer = window.setTimeout(autoScroll, interval);
     }
-    animationFrame = requestAnimationFrame(autoScroll);
+    timer = window.setTimeout(autoScroll, interval);
     return () => {
-      cancelAnimationFrame(animationFrame);
+      clearTimeout(timer);
     };
   }, [isDragging, direction, zoomImg]);
 

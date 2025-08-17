@@ -41,7 +41,7 @@ export default function Main() {
     <div className="main-root">
       {showDropDown && (
         <div className={`dropDownMessage${fadeOut ? " fadeout" : ""}`}>
-          <div className="dropDownMessage-text">Email sent~</div>
+          <div className="dropDownMessage-text">Form sent~ </div>
         </div>
       )}
       <NavBar></NavBar>
