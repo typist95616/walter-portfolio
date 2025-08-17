@@ -119,6 +119,10 @@ html {
         display: flex;
         justify-content: center;
         font-family: 'Ubuntu', sans-serif;
+
+        @media (max-width: 600px) {
+            font-size: 20px;
+        }
     }
 
     .loading-char {
