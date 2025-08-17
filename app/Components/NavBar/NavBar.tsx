@@ -5,16 +5,27 @@ import "./NavBar.scss";
 import ThemeSwitch from "./ThemeSwitch";
 import { SiCodingninjas } from "react-icons/si";
 
-export default function NavBar() {
+interface NavBarProps {
+    theme: "light" | "dark" | null;
+    setTheme: (theme: "light" | "dark") => void;
+}
 
-    const [theme, setTheme] = useState<"light" | "dark">("light");
+export default function NavBar({ theme, setTheme }: NavBarProps) {
 
     useEffect(() => {
-        document.documentElement.setAttribute("data-theme", theme);
-    }, [theme]);
+        const media = window.matchMedia("(prefers-color-scheme: dark)");
+        const handler = (e: MediaQueryListEvent) => {
+            if (!localStorage.getItem("theme")) {
+                setTheme(e.matches ? "dark" : "light");
+            }
+        };
+        media.addEventListener("change", handler);
+        return () => media.removeEventListener("change", handler);
+    }, []);
 
     const toggleTheme = () => {
         setTheme(theme === "light" ? "dark" : "light");
+        localStorage.setItem("theme", theme === "light" ? "dark" : "light");
     };
 
     return (
@@ -38,7 +49,7 @@ export default function NavBar() {
                 <div className="container">
                     <a href="#contact">Contact</a>
                 </div>
-                <ThemeSwitch onClick={toggleTheme} />
+                <ThemeSwitch theme={theme} onToggle={toggleTheme} />
             </div>
         </div>
     )

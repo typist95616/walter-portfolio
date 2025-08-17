@@ -4,19 +4,14 @@ import { FiSun } from "react-icons/fi";
 import { FaMoon } from "react-icons/fa";
 
 interface ThemeSwitchProps {
-    onClick?: () => void;
+    theme: "light" | "dark" | null;
+    onToggle: () => void;
 }
 
 export default function ThemeSwitch(props: ThemeSwitchProps) {
 
-    const [theme, setTheme] = useState<"light" | "dark">("light");
-
-    useEffect(() => {
-        document.documentElement.setAttribute("data-theme", theme);
-    }, [theme]);
-
     return (
-        <div className={`themeSwitch-root ${theme}`} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        <div className={`themeSwitch-root ${props.theme}`} onClick={props.onToggle}>
             <FiSun size={20} className="light-icon"/>
             <FaMoon size={20} className="dark-icon"/>
             <div className="switch-ball"></div>
