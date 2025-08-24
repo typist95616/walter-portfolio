@@ -45,6 +45,7 @@
 
     @media (max-width: 600px) {
         font-size: 12px;
+        padding: 0 5px;
 
         .navBar-left {
             display: none;
@@ -52,6 +53,7 @@
 
         .navBar-right {
             gap: 10px;
+            font-size: 10px;
         }
     }
 }

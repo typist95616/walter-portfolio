@@ -41,8 +41,17 @@
                     align-items: center;
                     gap: 30px;
                 }
-            }
 
+                @media (max-width: 600px) {
+                    .skills-firstLine {
+                        gap: 10px;
+                    }
+
+                    .skills-secondLine {
+                        gap: 10px;
+                    }
+                }
+            }
         }
     }
 }

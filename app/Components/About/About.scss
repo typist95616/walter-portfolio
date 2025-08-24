@@ -34,6 +34,16 @@
                 max-width: 70vw;
             }
 
+            @media (max-width: 600px) {
+                .about-heading {
+                    font-size: 36px;
+                }
+
+                .about-intro {
+                    font-size: 14px;
+                }
+            }
+
             .divider-container {
                 display: flex;
                 justify-content: center;

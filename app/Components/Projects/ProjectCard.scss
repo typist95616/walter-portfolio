@@ -20,6 +20,8 @@
     flex-direction: column;
     gap: 5px;
     transition: background-color 0.3s, color 0.3s;
+    flex: 1 1 300px;
+    max-width: 100%;
 
     .image-container {
         display: flex;

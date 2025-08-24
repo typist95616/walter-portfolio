@@ -41,6 +41,24 @@
             .intro-4 {
                 font-size: 48px;
             }
+
+            @media (max-width: 600px) {
+                .intro-1 {
+                    font-size: 24px;
+                }
+
+                .intro-2 {
+                    font-size: 24px;
+                }
+
+                .intro-3 {
+                    font-size: 48px;
+                }
+
+                .intro-4 {
+                    font-size: 36px;
+                }
+            }
         }
 
         .profileImage {
